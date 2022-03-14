@@ -13,7 +13,18 @@ let parolaDivisa = parolaUtente.split("");
 console.log(parolaDivisa);
 
 // invertire l'array con il metodo reverse
-parolaAlContrario = parolaDivisa.reverse();
+parolaDivisa = parolaDivisa.reverse();
+console.log(parolaDivisa);
 
+// unire le singole lettere
 
+const parolaAlContrario = parolaDivisa.join('');
 console.log(parolaAlContrario);
+
+//verifica delle parole
+
+if(parolaUtente === parolaAlContrario){
+  console.log(`La parola ${parolaUtente} è un palindromo`);
+}else{
+  console.log(`La parola ${parolaUtente} non è un palindromo`);
+}
