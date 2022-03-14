@@ -9,18 +9,34 @@ Dichiariamo chi ha vinto.
 
 //richieste all'utente
 
-const sceltaUtente = prompt('Pari o dispari?');
+let sceltaUtente = prompt('Pari o dispari?').toLowerCase();
 let sceltaNumeroUtente = "";
 
-if (sceltaUtente === "Pari" || "pari" || sceltaUtente === "Dispari" || "dispari"){
+if(sceltaUtente === "pari" || sceltaUtente === "dispari"){
   
   sceltaNumeroUtente = parseInt(prompt("Inserisci un numero da 1 a 5"));
   
   if(sceltaNumeroUtente < 1 || sceltaNumeroUtente > 5){
 
-    alert('Puoi inserire solo un numero compreso tra 1 e 5!')
+    alert('Puoi inserire solo un numero compreso tra 1 e 5!');
+    sceltaNumeroUtente = parseInt(prompt("Inserisci un numero da 1 a 5"));
   }
 
+}else{
+  alert("scegli tra pari o dispari");
+  
 }
 
 console.log(sceltaNumeroUtente);
+console.log(sceltaUtente);
+
+//generare un numero random
+
+
+function numeroRandom (){
+  let sceltaComputer = parseInt(Math.floor(Math.random()* 5 + 1));
+  return sceltaComputer;
+}
+
+ const numeroComputer = numeroRandom();
+console.log(numeroComputer);
