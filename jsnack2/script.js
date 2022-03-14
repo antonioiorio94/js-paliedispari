@@ -27,8 +27,7 @@ if(sceltaUtente === "pari" || sceltaUtente === "dispari"){
   
 }
 
-console.log(sceltaNumeroUtente);
-console.log(sceltaUtente);
+console.log(`La tua scelta è ${sceltaUtente} ed il tuo numero è ${ sceltaNumeroUtente} `);
 
 //generare un numero random
 
@@ -39,7 +38,7 @@ function numeroRandom (){
 }
 
  const numeroComputer = numeroRandom();
-console.log(numeroComputer);
+console.log(`Il numero scelto dal computer è ${numeroComputer}`);
 
 //somma delle scelte
 
