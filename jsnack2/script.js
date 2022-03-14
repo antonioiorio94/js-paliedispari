@@ -61,4 +61,16 @@ function pariODIspari (numero){
 };
 
 console.log(`La somma dei numeri scelti è ${somma}, quindi è ${validatore}!`);
-console.log(validatore)
+
+
+//Dichiaro il vincitore
+let vincitore = "";
+
+if(sceltaUtente === validatore){
+  vincitore = "Hai vinto!"
+}else{
+  vincitore = "Hai perso!"
+}
+
+console.log(vincitore);
+
