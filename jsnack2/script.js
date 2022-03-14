@@ -22,7 +22,7 @@ if(sceltaUtente === "pari" || sceltaUtente === "dispari"){
     sceltaNumeroUtente = parseInt(prompt("Inserisci un numero da 1 a 5"));
   }
 
-}else{
+}else {
   alert("scegli tra pari o dispari");
   
 }
@@ -40,3 +40,25 @@ function numeroRandom (){
 
  const numeroComputer = numeroRandom();
 console.log(numeroComputer);
+
+//somma delle scelte
+
+const somma = (sceltaNumeroUtente + numeroComputer);
+
+
+//funzione per stabilire se la somma è pari o dispari
+
+let validatore = pariODIspari(somma);
+
+function pariODIspari (numero){
+  let risultato = "";
+  if (numero % 2 === 0){
+    risultato = "pari";
+  }else{
+    risultato = "dispari"
+  };
+  return risultato;
+};
+
+console.log(`La somma dei numeri scelti è ${somma}, quindi è ${validatore}!`);
+console.log(validatore)
